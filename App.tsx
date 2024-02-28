@@ -25,6 +25,7 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 import CustomIcons from './src/components/CustomIcons';
+import {upcomingMovies, popularMovies, searchMovies} from './src/api/apicalls';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -62,6 +63,8 @@ function App(): React.JSX.Element {
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
+
+  console.log(upcomingMovies);
 
   return (
     <SafeAreaView style={backgroundStyle}>
