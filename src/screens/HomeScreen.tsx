@@ -151,7 +151,6 @@ const HomeScreen = ({navigation}: any) => {
           return (
             <MovieCard
               shouldMaginatedAtEnd={true}
-              shouldMaginatedAround={true}
               cardFunction={() => {
                 navigation.push('MovieDetails', {
                   movieId: item.id,
