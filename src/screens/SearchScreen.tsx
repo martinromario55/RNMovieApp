@@ -22,7 +22,7 @@ const SearchScreen = ({navigation}: any) => {
       let json = await response.json();
       setSearchList(json.results);
     } catch (error) {
-      console.error('Something went wrong in searchMoviesFunction');
+      console.error('Something went wrong in searchMoviesFunction', error);
     }
   };
 
@@ -35,6 +35,7 @@ const SearchScreen = ({navigation}: any) => {
           keyExtractor={(item: any) => item.id}
           bounces={false}
           numColumns={2}
+          showsVerticalScrollIndicator={false}
           ListHeaderComponent={
             <View style={styles.InputHeaderContainer}>
               <InputHeader searchFunction={searchMoviesFunction} />

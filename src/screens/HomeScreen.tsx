@@ -123,6 +123,7 @@ const HomeScreen = ({navigation}: any) => {
     <ScrollView
       style={styles.container}
       bounces={false}
+      showsVerticalScrollIndicator={false}
       contentContainerStyle={styles.scrollViewContainer}>
       <StatusBar hidden />
 
@@ -136,6 +137,7 @@ const HomeScreen = ({navigation}: any) => {
         keyExtractor={(item: any) => item.id}
         horizontal
         bounces={false}
+        showsHorizontalScrollIndicator={false}
         decelerationRate={0}
         snapToInterval={width * 0.7 + SPACING.space_36}
         contentContainerStyle={styles.containerGap36}
@@ -153,7 +155,7 @@ const HomeScreen = ({navigation}: any) => {
               shouldMaginatedAtEnd={true}
               cardFunction={() => {
                 navigation.push('MovieDetails', {
-                  movieId: item.id,
+                  movieid: item.id,
                 });
               }}
               cardWidth={width * 0.7}
@@ -175,6 +177,7 @@ const HomeScreen = ({navigation}: any) => {
         keyExtractor={(item: any) => item.id}
         horizontal
         bounces={false}
+        showsHorizontalScrollIndicator={false}
         contentContainerStyle={styles.containerGap36}
         renderItem={({item, index}) => (
           <SubMovieCard
@@ -200,6 +203,7 @@ const HomeScreen = ({navigation}: any) => {
         keyExtractor={(item: any) => item.id}
         horizontal
         bounces={false}
+        showsHorizontalScrollIndicator={false}
         contentContainerStyle={styles.containerGap36}
         renderItem={({item, index}) => (
           <SubMovieCard
