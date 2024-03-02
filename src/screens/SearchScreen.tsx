@@ -1,11 +1,4 @@
-import {
-  Dimensions,
-  FlatList,
-  StatusBar,
-  StyleSheet,
-  Text,
-  View,
-} from 'react-native';
+import {Dimensions, FlatList, StatusBar, StyleSheet, View} from 'react-native';
 import React, {useState} from 'react';
 import {baseImagePath, searchMovies} from '../api/apicalls';
 import {COLORS, SPACING} from '../theme/theme';

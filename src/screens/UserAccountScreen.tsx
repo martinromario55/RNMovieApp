@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import {Text, View, StyleSheet, StatusBar, Image} from 'react-native';
 import {COLORS, FONTFAMILY, FONTSIZE, SPACING} from '../theme/theme';
 import AppHeader from '../components/AppHeader';

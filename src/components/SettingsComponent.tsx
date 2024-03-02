@@ -1,18 +1,18 @@
-import * as React from 'react';
+import React from 'react';
 import {Text, View, StyleSheet} from 'react-native';
 import {COLORS, FONTFAMILY, FONTSIZE, SPACING} from '../theme/theme';
 import CustomIcons from './CustomIcons';
 
-const SettingComponent = (props: any) => {
+const SettingComponent = ({icon, heading, subheading, subtitle}: any) => {
   return (
     <View style={styles.container}>
       <View>
-        <CustomIcons name={props.icon} style={styles.iconStyle} />
+        <CustomIcons name={icon} style={styles.iconStyle} />
       </View>
       <View style={styles.settingContainer}>
-        <Text style={styles.title}>{props.heading}</Text>
-        <Text style={styles.subtitle}>{props.subheading}</Text>
-        <Text style={styles.subtitle}>{props.subtitle}</Text>
+        <Text style={styles.title}>{heading}</Text>
+        <Text style={styles.subtitle}>{subheading}</Text>
+        <Text style={styles.subtitle}>{subtitle}</Text>
       </View>
       <View style={styles.iconBG}>
         <CustomIcons name={'arrow-right'} style={styles.iconStyle} />

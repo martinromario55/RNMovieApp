@@ -5,8 +5,6 @@ import {
   ScrollView,
   StatusBar,
   StyleSheet,
-  Text,
-  TouchableOpacity,
   View,
 } from 'react-native';
 import React, {useEffect, useState} from 'react';
@@ -88,10 +86,6 @@ const HomeScreen = ({navigation}: any) => {
       );
     }
   };
-  // console.log('api', nowPlayingMovies);
-  // console.log('nowPlaying:', nowPayingMoviesList?.length);
-  // console.log('popularMoives:', popularMoviesList?.length);
-  // console.log('upcoming:', upcomingMoviesList?.length);
 
   if (
     nowPayingMoviesList == undefined &&

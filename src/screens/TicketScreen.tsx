@@ -1,5 +1,4 @@
 import {
-  ActivityIndicator,
   Image,
   ImageBackground,
   StatusBar,
