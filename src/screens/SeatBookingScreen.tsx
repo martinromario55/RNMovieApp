@@ -78,11 +78,11 @@ const generateSeats = () => {
 };
 
 const SeatBookingScreen = ({navigation, route}: any) => {
-  const [dateArray, setDateArray] = useState<any>(generateDate());
+  const [dateArray, setDateArray] = useState<any[]>(generateDate());
   const [selectedDateIndex, setSelectedDateIndex] = useState<any>();
   const [price, setPrice] = useState<number>(0);
   const [twoDSeatArray, setTwoDSeatArray] = useState<any[][]>(generateSeats());
-  const [selectedSeatArray, setSelectedSeatArray] = useState<any[]>([]);
+  const [selectedSeatArray, setSelectedSeatArray] = useState([]);
   const [selectedTimeIndex, setSelectedTimeIndex] = useState<any>();
 
   const selectSeat = (index: number, subindex: number, num: number) => {
@@ -118,7 +118,7 @@ const SeatBookingScreen = ({navigation, route}: any) => {
             seatArray: selectedSeatArray,
             time: timeArray[selectedTimeIndex],
             date: dateArray[selectedDateIndex],
-            ticketImage: route.params.PosterImage,
+            ticketImage: route.params?.PosterImage,
           }),
         );
       } catch (error) {
@@ -158,7 +158,11 @@ const SeatBookingScreen = ({navigation, route}: any) => {
             colors={[COLORS.BlackRGB10, COLORS.Black]}
             style={styles.linearGradient}>
             <View style={styles.appHeaderContainer}>
-              <AppHeader name="close" header={''} navigation={navigation} />
+              <AppHeader
+                name="close"
+                header={''}
+                action={() => navigation.goBack()}
+              />
             </View>
           </LinearGradient>
         </ImageBackground>
